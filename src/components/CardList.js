@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ robots, searchedRobot }) => {
+const CardList = ({ robots, searchField }) => {
   const filteredRobots = robots.filter((robot) =>
-    robot.name.toLowerCase().includes(searchedRobot.toLowerCase())
+    robot.name.toLowerCase().includes(searchField.toLowerCase())
   );
 
   return filteredRobots.map((robot) => {
